@@ -24,10 +24,29 @@ public class Assignment {
   /**
    * No-arg contructor for Assignment class.
    */
-  public Assignment() {}
+  public Assignment() {
+    name = "";
+    totalPoints = 100;
+  }
 
   /**
-   * Method to set the grade for a student
+   * Method to set the assignment name.
+   *
+   * @param name The assignment name.
+   */
+  public void setAssignmentName(String name) { this.name = name; }
+
+  /**
+   * Method to set the total points of the assignment.
+   *
+   * @param totalPoints Total points of the assignment.
+   */
+  public void setTotalPoints(double totalPoints) {
+    this.totalPoints = totalPoints;
+  }
+
+  /**
+   * Method to set the grade for a student.
    *
    * @param studentID The student's ID.
    * @param grade The student's raw grade.
@@ -35,6 +54,20 @@ public class Assignment {
   public void setRawGrade(int studentID, double grade) {
     grades.put(studentID, grade);
   }
+
+  /**
+   * Method to get the assignment name.
+   *
+   * @return The assignment name.
+   */
+  public String getAssignmentName() { return name; }
+
+  /**
+   * Method to get the total points of the assignment.
+   *
+   * @return The total points of the assignment.
+   */
+  public double getTotalPoints() { return totalPoints; }
 
   /**
    * Method to get the student's raw grade.
