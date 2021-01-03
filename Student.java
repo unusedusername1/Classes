@@ -1,13 +1,13 @@
 import java.util.Scanner;
 import java.util.ArrayList;
-class Student 
+class Student //Drew Balaji
 {
   static Scanner scan = new Scanner(System.in);
   private static String answer;
   private static String[] takenClasses = {"Precalculus Honors", "AP Chemistry", "APCS", "APUSH", "American Lit"};
   public static void main(String[] args) 
-  {//student
-    Student s1 = new Student(225068, "Drew Balaji", "(513)3713920", "Anita", 22, takenClasses);
+  { //"tester" class
+    Student s1 = new Student(225068, "Drew Balaji", "(513)3713920", "Anita", 22, takenClasses);//sample for a student
     ArrayList<Student> arrL = new ArrayList<Student>();
     arrL.add(s1);
     System.out.print("Do you want to add another student? Y/N");
@@ -49,12 +49,12 @@ class Student
       private String parentName;
       private int yearGrad;
       private String[] classesTaken;
-      public Student()
+      public Student()//no args constructor
       {
 
       }
       public Student(int initStudentId, String initStudentName, String initPhoneHome, String initParentName, int initYearGrad, String[] initClassesTaken)
-      {
+      {//constructors
       studentId = initStudentId;
       studentName = initStudentName;
       phoneHome = initPhoneHome;
@@ -62,6 +62,7 @@ class Student
       yearGrad = initYearGrad;
       classesTaken = initClassesTaken;
       }
+      //setters below
       public void setStudentId(int newStudentId)
       {
           studentId = newStudentId;
@@ -86,6 +87,7 @@ class Student
       {
         classesTaken = newClassesTaken;
       }
+      //getters below
       public int getStudentId()
       {
         return studentId;
@@ -110,13 +112,13 @@ class Student
       {
         return classesTaken;
       }
+      //to string method for printing
       public String toString()
       {
         String classesTakenA = "";
         for(int i = 0; i < classesTaken.length; i++)
         {
           classesTakenA += classesTaken[i] + ", ";
-          //System.out.println(songA);
         }
         return studentId + ", " + studentName + ", " + phoneHome + "" +  parentName + ", " + yearGrad + ", " + classesTaken;
       }
