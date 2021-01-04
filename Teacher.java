@@ -4,10 +4,14 @@
  *
  * @author Wes G, framework created by Jonathan Gai
  */
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class Teacher {
   private int id;
   private String name;
   private String contact;
+  private ArrayList<Classes> teachClasses = new ArrayList<Classes>();
 
   /**
    * Constructor for Teacher class.
@@ -76,13 +80,29 @@ public class Teacher {
    * @return The teacher's contact.
    */
   public String getTeacherContact() { return contact; }
+  
+  /**
+   * Method to add a class
+   *
+   * @param The name of the class
+   */
+  public void addClass(String className) {
+    teachClass.add(className);
+  }
+  
+  /**
+   * Method to remove a class
+   *
+   * @param The name of the class
+   */
+  public void addClass(String className) {
+    teachClass.remove(className);
+  }
 
 ///////////////////////////////////////////////////
 
 /* to do
- * ARRAY LIST OF CLASSES
- * add class method
- * remove class method
+ * fix remove class method
  * list classes
  * to string method
  * 
