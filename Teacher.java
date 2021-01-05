@@ -95,7 +95,7 @@ public class Teacher {
    *
    * @param The name of the class
    */
-  public void addClass(String className) {
+  public void removeClass(String className) {
     teachClass.remove(className);
   }
 
